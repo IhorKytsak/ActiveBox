@@ -13,5 +13,14 @@ $(function () {
       } else {
          header.removeClass("fixed");
       }
+<<<<<<< HEAD
    });
+=======
+
+   })
+
+
+
+   header.addClass('fixed');
+>>>>>>> 09ccd7acd53e75db9f213ec50a1ca3a7dac2fa01
 });
