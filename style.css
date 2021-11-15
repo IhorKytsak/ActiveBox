@@ -50,7 +50,8 @@ p {
 
     position: fixed;
 
-    background-color: #31344e ;
+    background: #31344e 
+    url('img/introBg.jpg') center no-repeat;
 }
 
 .header.fixed .header__inner {
@@ -385,9 +386,19 @@ margin: 100px 0 70px;
     overflow: hidden;
 }
 
+.reviews__slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+    height: auto;
+}
+
 .reviews__item {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .reviews__photo {
@@ -455,6 +466,49 @@ margin: 100px 0 70px;
     font-weight: 700;
     text-transform: uppercase;
 }
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 15px;
+    list-style: none;
+    width: 50%;
+
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    width: 20px;
+    height: 20px;
+    padding: 0; 
+
+    background: #fff;
+    border-radius: 50%;
+    border: 0;
+    opacity: 0.5;
+    cursor: pointer;
+
+    font-size: 0;
+    color: transparent;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
+}
+
 
 /* Footer
 --------------------------*/
@@ -579,6 +633,24 @@ margin: 100px 0 70px;
     /*Nav*/
     .nav {
         display: none;
+        width: 100%;
+        flex-direction: column;
+
+        background: #31344e 
+    url('img/introBg.jpg') center no-repeat;
+        text-align: right;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav__link {
+        padding: 9px 15px;
     }
 
     /*Burger*/
@@ -625,6 +697,10 @@ margin: 100px 0 70px;
         width: 100%;
         padding-left: 0;
         padding-bottom: 40px;
+    }
+
+    .slick-dots {
+        width: 100%;
     }
 
 }
